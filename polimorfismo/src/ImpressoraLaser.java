@@ -4,7 +4,8 @@ public class ImpressoraLaser extends Impressora{
         super(10_000);
     }
 
-    protected void fetuarImpressao(String string){
+    @Override
+    protected void efetuarImpressao(String string){
         System.out.println("Imprimindo com impressora Laiser");
     }
 }
