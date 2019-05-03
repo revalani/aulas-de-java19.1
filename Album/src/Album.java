@@ -45,8 +45,17 @@ public class Album {
      * @return quantidade de figurinhas que estão coladas no album
      */
     public int getContFigurinhas() {
-        return this.itensColados.length-1;
+        int cont =0;
+
+        for (int i = 0; i < this.itensColados.length; i++) {
+            if( this.itensColados[i] != 0 ) {
+                cont++;
+            }
+        }
+
+        return cont;
     }
+
 
     public int getQuantasFaltam() {
         return this.tamanhoAlbum-this.getContFigurinhas();
